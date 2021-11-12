@@ -37,3 +37,11 @@ h1, h3, p{
     border-radius: 5px;
     border-color: white;
     background-color: white;
+}
+.chart3{
+    width: 340px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: black;
+    background-color: white;
+}
