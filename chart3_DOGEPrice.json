@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "",
+  "data": {
+    "url": "https://rest.coinapi.io/v1/ohlcv/DOGE/USD/history?period_id=12HRS&apikey=E9282FCC-842C-4267-B1AE-AC6EA0F717D8&time_start=2021-04-14T00:00:00&limit=1000&include_empty_items=false",
+    "format": {"type": "json", "property": "months"}
+  },
+  "transform": [{"calculate": "toDate(datum.time_period_end)", "as": "time"}],
+  "mark": {"type": "line", "color": "#9B26DE", "strokeWidth": 2, "opacity": 1},
+  "title": {
+    "text": "DOGE Historical Price",
+    "subtitle": "Starting from April 2021- Price in USD cents",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 300,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "title": null,
+      "timeUnit": "monthdate"
+    },
+    "y": {"field": "price_high", "type": "quantitative", "title": null}
+  },
+  "config": {}
+}
