@@ -29,6 +29,9 @@
 <body>
 
     <h1>Data Science 2021.</h1>
+    <div class="wrap">
+      <p class="rubric-launch">To see my project click<a class="textLink" href="project.html"> here</a>.</p>
+      </div>
 
     <h3>Covid-19</h3>
 
@@ -53,15 +56,26 @@
 
   <p>My second chart looks at productivity in the UK</p>
 
-<div class="chart" id="secondChart">
+<div class="chart2" id="secondChart">
   <script>
     var myChart1 = "chart2_ukProductivity.json";
     vegaEmbed('#secondChart', myChart1);
   </script>
 </div>
- <div class="wrap">
+
+<div class="wrap">
   <p class="rubric-launch">To see my project click<a class="textLink" href="project"> here</a>.</p>
-</body>
+  </div>
+
+<h3>DOGE Price</h3>
+<p>This chart shows the historical price of DOGE cryptocurrency</p>
+
+<div class="chart3" id="thirdChart"> 
+  <script> 
+  var myChart1 = "chart3_DOGEPrice.json";
+  vegaEmbed('#thirdChart', myChart1);
+  </script>
+</div>
 </body>
 
 
