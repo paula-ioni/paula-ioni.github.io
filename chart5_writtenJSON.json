@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 250,
+  "height": {"step": 16},
+  "data": {
+    "values": [
+      {"genre": "Drama", "mean": 6.5},
+      {"genre": "Comedy", "mean": 6.773},
+      {"genre": "Musical", "mean": 6.447},
+      {"genre": "Thriller/Suspense", "mean": 6.36},
+      {"genre": "Adventure", "mean": 6.345},
+      {"genre": "Action", "mean": 6.114},
+      {"genre": "Romantic Comedy", "mean": 5.873},
+      {"genre": "Horror", "mean": 5.676},
+      {"genre": "Western", "mean": 6.842},
+      {"genre": "Documentary", "mean": "6.997"},
+      {"genre": "Black Comedy", "mean": 6.818},
+      {"genre": "Concert/Performance", "mean": 6.325}
+    ]
+  },
+  "encoding": {"y": {"field": "genre", "type": "nominal", "axis": null}},
+  "layer": [
+    {
+      "mark": {"type": "bar", "color": "#ECDAE9"},
+      "encoding": {
+        "x": {
+          "aggregate": "mean",
+          "field": "mean",
+          "scale": {"domain": [0, 10]},
+          "title": "Mean IMDB Ratings"
+        }
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "x": 5},
+      "encoding": {"text": {"field": "genre"}, "detail": {"aggregate": "count"}}
+    }
+  ],
+  "config": {}
+}
