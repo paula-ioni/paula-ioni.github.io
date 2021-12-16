@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "",
+  "data": {
+    "url": "https://raw.githubusercontent.com/paula-ioni/paula-ioni.github.io/main/weather-16.json",
+    "format": {"type": "json", "property": "data"}
+  },
+  "transform": [{"calculate": "toDate(datum.valid_date)", "as": "time"}],
+  "mark": {
+    "type": "line",
+    "color": "#1DD8B3",
+    "strokeWidth": 2,
+    "opacity": 1,
+    "point": {"filled": false, "fill": "gray", "color": "18A98C"}
+  },
+  "title": {
+    "text": "Bristol Maximum Temperatures",
+    "subtitle": "From 16th December to 31st, Source: Weatherbit API",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#EFEFFF",
+    "subtitleColor": "#EFEFFF"
+  },
+  "width": 300,
+  "height": 300,
+  "config": {"background": "#12125B"},
+  "encoding": {
+    "x": {
+      "field": "time",
+      "type": "temporal",
+      "title": null,
+      "timeUnit": "monthdate",
+      "axis": {
+        "format": "%d %b",
+        "labelFlushOffset": 8,
+        "labelColor": "#EFEFFF",
+        "gridColor": "gray"
+      }
+    },
+    "y": {
+      "field": "app_max_temp",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"labelColor": "#EFEFFF", "gridColor": "gray"}
+    }
+  }
+}
