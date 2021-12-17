@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +10,11 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="index.css"> 
-    <!This is how we link the CSS into our HTML with the 'link' element>
+    <!--This is how we link the CSS into our HTML with the 'link' element-->
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        
     </style>
 
     <!--The next three lines allow the Vega embed-->
@@ -22,13 +22,31 @@
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
+
 </head>
 
 
 
 <body>
+  <ul id="line">
+    
+  </ul>
+  <ul id="lights">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    
+  </ul>
 
-    <h1>Data Science 2021.</h1>
+
+    <h1>Data Science 2021</h1>
     <div class="wrap">
       <p class="rubric-launch">To see my project click<a class="textLink" href="project.html"> here</a>.</p>
       </div>
@@ -37,7 +55,7 @@
 
     <p>The first chart tracks Covid-19 cases by UK region.</p>
 
-<!--Vaga embed, with notes for what is going on-->
+<!--Vega embed, with notes for what is going on-->
 <div class="chart" id="firstChart">
 
   <script>
@@ -70,15 +88,18 @@
 <h3>DOGE Price</h3>
 <p>This chart shows the historical price of DOGE cryptocurrency</p>
 
+<!-- Vega chart-->
 <div class="chart3" id="thirdChart"> 
   <script> 
   var myChart1 = "chart3_DOGEPrice.json";
   vegaEmbed('#thirdChart', myChart1);
   </script>
 </div>
-    
+<!------------->
+
+
 <h3>SHIBA INU Price</h3>
-<p>The following chart shows Shiba Inu prices from August 2021 until November 2021 using a CSV file, meaning the data will not be updated after November.
+<p>The following chart shows Shiba Inu cryptocurrency prices from August 2021 until November 2021 using a CSV file, meaning the data will not be updated after November.
 </p>
 <!-- Vega chart-->
 <div class="chart4" id="fourChart">
@@ -87,9 +108,11 @@
     vegaEmbed('#fourChart', myChart1);
   </script>
 </div>
+
+
 <!--------------->
-    
-  <h3>IMDB Ratings</h3>
+
+<h3>IMDB Ratings</h3>
 <p>This chart was taken from one of the VEGA Lite examples, however I wrote the data manually in JSON. This can be
   only shown in the chart's JSON file found  <a class="textLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/chart5_writtenJSON.json" > right here </a>
  </p>
@@ -102,11 +125,9 @@
   </script>
 </div>
 
-
-<!--------------->  
-    
-    <h3>Colours Chart </h3>
-<p>This is a chart taken from VEGA Lite example, where I added the pink, purple and orange observations by myself
+<!--------------->
+<h3>Colours Chart </h3>
+<p>This is a chart taken from VEGA Lite example, where I added the pink, purple and yellow observations by myself
   </p>
   <!-- Vega chart-->
 <div class="chart6" id="sixthChart">
@@ -117,6 +138,8 @@
 </div>
 
 <!--------------->
+
+
 </body>
 
 
