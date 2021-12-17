@@ -42,6 +42,7 @@
     <li></li>
     <li></li>
     <li></li>
+    <li></li>
     
   </ul>
 
@@ -138,7 +139,21 @@
 </div>
 
 <!--------------->
-
+    
+    
+<h3>Bristol Temperatures</h3>
+<p>Chart maps the maximum temperatures from Bristol recorded from 16th December until 31st December.
+  I got the data from Weatherbit API via Rapid API. Then data generated was fetched with Python
+  and put the results in a JSON file.
+</p>
+ <!-- Vega chart-->
+ <div class="chart7" id="seventhChart">
+  <script>
+    var myChart1 = "chart7_weatherAPI.json";
+    vegaEmbed('#seventhChart', myChart1);
+  </script>
+</div>
+<!--------------->
 
 </body>
 
