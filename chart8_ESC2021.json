@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 250,
+  "height": {"step": 16},
+  "data": {
+    "url": "https://raw.githubusercontent.com/paula-ioni/paula-ioni.github.io/main/ESC2021_results.csv",
+    "format": {"type": "csv"}
+  },
+  "encoding": {
+    "y": {
+      "field": "country",
+      "type": "nominal",
+      "axis": null,
+      "sort": {"op": "sum", "field": "points", "order": "descending"}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "color": "#dc91a6"},
+      "encoding": {
+        "x": {
+          "aggregate": "sum",
+          "field": "points",
+          "scale": {"domain": [0, 600]},
+          "title": "Eurovision 2021 Final Results",
+          "axis": {"gridColor": "#a5a58d"}
+        }
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "x": 5},
+      "encoding": {"text": {"field": "country"}}
+    }
+  ],
+  "config": {"background": "#efdfc5"}
+}
