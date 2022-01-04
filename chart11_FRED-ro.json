@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "",
+  "data": {
+    "url": "https://raw.githubusercontent.com/paula-ioni/paula-ioni.github.io/main/data_FRED_SLUEM1524ZSROU.json",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "mark": {"type": "line", "color": "#cfa0ff", "strokeWidth": 2, "opacity": 1},
+  "title": {
+    "text": "Youth Unemployment Rate for Romania",
+    "subtitle": "Percentage, not seasonally adjusted, Source: FRED",
+    "subtitleColor": "#9381FF",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#9381FF"
+  },
+  "width": 300,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "labelSeparation": 10,
+        "domainColor": "#9381FF",
+        "labelColor": "#9381FF",
+        "tickColor": "#9381FF",
+        "gridColor": "#FFD8BE"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "scale": {"domain": [10, 30]},
+      "title": null,
+      "axis": {
+        "labelSeparation": 10,
+        "domainColor": "#9381FF",
+        "labelColor": "#9381FF",
+        "tickColor": "#9381FF",
+        "gridColor": "#FFD8BE"
+      }
+    }
+  },
+  "config": {"background": "#FFEEDD"}
+}

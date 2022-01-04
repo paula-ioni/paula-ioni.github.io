@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "",
+  "data": {
+    "url": "https://raw.githubusercontent.com/paula-ioni/paula-ioni.github.io/main/data_FRED_MSPUS.json",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "mark": {"type": "line", "color": "#914094", "strokeWidth": 2, "opacity": 1},
+  "title": {
+    "text": "Median Sales Price of Houses Sold for the United States",
+    "subtitle": "Not seasonally adjusted, Source: FRED",
+    "subtitleColor": "#150962",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#150962"
+  },
+  "width": 300,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "labelSeparation": 10,
+        "domainColor": "#150962",
+        "labelColor": "#150962",
+        "tickColor": "#150962",
+        "gridColor": "#D9D5F3"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Dollars $",
+      "axis": {
+        "labelSeparation": 10,
+        "domainColor": "#150962",
+        "labelColor": "#150962",
+        "tickColor": "#150962",
+        "gridColor": "#D9D5F3"
+      }
+    }
+  },
+  "config": {"background": "#F3F2FD"}
+}
