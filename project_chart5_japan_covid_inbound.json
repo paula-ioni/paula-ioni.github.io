@@ -1,0 +1,112 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart showing number of inbound tourists in Japan",
+  "title": {
+    "text": "COVID-19 - Japan Inbound Arrivals",
+    "fontSize": 15,
+    "subtitle": "Starting from March, Sources: UNWTO, Japan Tourism Statistics",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "subtitleColor": "#630353",
+    "anchor": "start",
+    "color": "#630353"
+  },
+  "config": {"background": "#FFEEDD", "view": {"stroke": "#FFD8BE"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/paula-ioni/paula-ioni.github.io/main/japan_inbound_2021.csv"
+  },
+  "width": 300,
+  "height": 300,
+  "layer": [
+    {
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "domainColor": "#FFD8BE",
+            "labelColor": "#630353",
+            "tickColor": "#FFD8BE",
+            "grid": false,
+            "format": " %b"
+          }
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "domainColor": "#FFD8BE",
+            "labelColor": "#630353",
+            "tickColor": "#FFD8BE",
+            "gridColor": "#FFD8BE"
+          }
+        },
+        "color": {
+          "field": "year",
+          "type": "nominal",
+          "scale": {"scheme": "plasma"},
+          "title": null
+        }
+      },
+      "layer": [
+        {"mark": "line"},
+        {
+          "params": [
+            {
+              "name": "label",
+              "select": {
+                "type": "point",
+                "encodings": ["x"],
+                "nearest": true,
+                "on": "mouseover"
+              }
+            }
+          ],
+          "mark": "point",
+          "encoding": {
+            "opacity": {
+              "condition": {"param": "label", "empty": false, "value": 1},
+              "value": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [{"filter": {"param": "label", "empty": false}}],
+      "layer": [
+        {
+          "mark": {"type": "rule", "color": "lightsalmon"},
+          "encoding": {
+            "x": {"type": "temporal", "field": "date", "aggregate": "min"}
+          }
+        },
+        {
+          "encoding": {
+            "text": {"type": "quantitative", "field": "value"},
+            "x": {"type": "temporal", "field": "date"},
+            "y": {"type": "quantitative", "field": "value"}
+          },
+          "layer": [
+            {
+              "mark": {
+                "type": "text",
+                "stroke": "white",
+                "strokeWidth": 2,
+                "align": "left",
+                "dx": 5,
+                "dy": -5
+              }
+            },
+            {
+              "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
+              "encoding": {"color": {"type": "nominal", "field": "year"}}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

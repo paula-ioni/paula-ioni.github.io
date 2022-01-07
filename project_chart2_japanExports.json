@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Japan Exports of Goods and Services",
+    "fontSize": 15,
+    "subtitle": "Quarterly data, shown in trillions of Yen, Source: FRED",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "color": "#630353",
+    "subtitleColor": "#630353"
+  },
+  "config": {"background": "#FFEEDD", "view": {"stroke": "transparent"}},
+  "width": 300,
+  "height": 300,
+  "data": {
+    "name": "myData",
+    "url": "https://raw.githubusercontent.com/paula-ioni/paula-ioni.github.io/main/data_FRED-JPNEXPORTQDSNAQ.json",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "mark": {
+    "type": "line",
+    "point": false,
+    "interpolate": "linear",
+    "color": "#d03970"
+  },
+  "transform": [
+    {"calculate": "year(datum.date)", "as": "year"},
+    {"filter": "datum.year>=minYear"},
+    {"filter": "datum.year<=maxYear"},
+    {"calculate": "(datum.value)/1000000000000", "as": "value2"}
+  ],
+  "params": [
+    {
+      "name": "minYear",
+      "value": 1994,
+      "bind": {
+        "input": "range",
+        "min": 1994,
+        "max": 2021,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2021,
+      "bind": {
+        "input": "range",
+        "min": 1994,
+        "max": 2021,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "domainColor": "#FFD8BE",
+        "labelColor": "#630353",
+        "tickColor": "#FFD8BE"
+      }
+    },
+    "y": {
+      "field": "value2",
+      "type": "quantitative",
+      "title": "JPY ¥ (trillions)",
+      "axis": {
+        "domainColor": "#FFD8BE",
+        "labelColor": "#630353",
+        "tickColor": "#FFD8BE",
+        "gridColor": "#FFD8BE"
+      }
+    }
+  }
+}

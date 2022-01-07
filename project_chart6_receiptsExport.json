@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "",
+  "data": {
+    "url": "https://raw.githubusercontent.com/paula-ioni/paula-ioni.github.io/main/receipt_exports_japan.csv"
+  },
+  "mark": {"type": "line", "color": "#f2a6bd", "strokeWidth": 2, "opacity": 1},
+  "title": {
+    "text": "Japan International tourism, receipts (% of total exports)",
+    "subtitle": "Percentage of total exports, Source: FRED",
+    "subtitleColor": "#630353",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "fontSize": 14,
+    "anchor": "start",
+    "color": "#630353"
+  },
+  "width": 300,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "Time",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "labelSeparation": 10,
+        "domainColor": "#FFD8BE",
+        "labelColor": "#630353",
+        "tickColor": "#FFD8BE",
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "% of total exports",
+      "axis": {
+        "labelSeparation": 10,
+        "domainColor": "#FFD8BE",
+        "labelColor": "#630353",
+        "tickColor": "#630353",
+        "gridColor": "#FFD8BE"
+      }
+    }
+  },
+  "config": {"background": "#FFEEDD", "view": {"stroke": "#FFD8BE"}}
+}
