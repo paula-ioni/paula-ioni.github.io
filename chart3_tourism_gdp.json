@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Tourism as % of GDP",
+    "fontSize": 15,
+    "subtitle": "Annual data, Source: OECD",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "color": "#630353",
+    "subtitleColor": "#630353"
+  },
+  "config": {"background": "#ffeedd", "view": {"stroke": "transparent"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/paula-ioni/paula-ioni.github.io/main/tourism_GDP.csv"
+  },
+  "width": 290,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "TIME",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "#FFD8BE",
+        "labelColor": "#630353",
+        "tickColor": "#FFD8BE"
+      }
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "% of GDP",
+      "axis": {
+        "gridColor": "#FFD8BE",
+        "domainColor": "#FFD8BE",
+        "labelColor": "#630353",
+        "tickColor": "#FFD8BE",
+        "titleColor": "#630353"
+      }
+    },
+    "color": {
+      "condition": {
+        "param": "hover",
+        "field": "LOCATION",
+        "type": "nominal",
+        "title": "Country",
+        "scale": {"scheme": "set2"}
+      },
+      "value": "grey"
+    },
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2},
+    "tooltip": [
+      {"field": "LOCATION", "title": "Country"},
+      {"field": "Value", "title": "Tourism (% GDP)", "type": "quantitative"},
+      {"field": "TIME", "title": "Year", "type": "temporal", "format": " %Y"}
+    ]
+  },
+  "layer": [
+    {
+      "description": "transparent layer to make it easier to trigger selection",
+      "params": [
+        {
+          "name": "hover",
+          "value": [{"LOCATION": "Japan"}],
+          "select": {"type": "point", "fields": ["LOCATION"], "on": "mouseover"}
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "point": {"size": 70},
+        "strokeWidth": 8,
+        "stroke": "transparent"
+      }
+    },
+    {"mark": "line"}
+  ]
+}
