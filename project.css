@@ -22,7 +22,7 @@ p{
 }
 
 p.sub{
-    font-size:12px;
+    font-size:14px;
     font-style:italic;
     margin-top: 0;
     border: 0;
@@ -30,3 +30,6 @@ p.sub{
 
 
 }
+ p.body1{
+     font-size:17px
+ }
