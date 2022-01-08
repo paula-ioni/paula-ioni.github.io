@@ -6,12 +6,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DS project 2021-2022</title>
     <link rel="stylesheet" href="project.css">
 
-</head>
-<body>
+    <!--SEARCH FOR FONT!!-->
+    <style> 
     
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=PT+Serif:wght@400;700&display=swap');
+        
+        
+    </style>
+
+    <!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+</head>
+
+<body>
+ <h1>How the ban of international tourists affected the economy of Japan 
+     during COVID-19?  </h1>
+<p class="sub"> Project by Paula Ionita, BSc Economics & Econometrics </p>
+<p> One of the most famous tourist attractions of East Asia and 
+    the third most powerful economy in the globe, Japan still continues
+    to suffer like many other nations since the pandemic was officialy
+    declared by WHO.It was the country chosen to host Summer Olympics of 2020. 
+    The event was highly anticipated as it was expected to boost the economy greatly. 
+    For the first time in history, it was postponed for 2021 and no spectators were allowed. 
+    The short-term benefits before the pandemic were predicted at around $109 billion, with 
+    inbound tourists as the main drive force of this enormous number (Hornyak, 2021). Economist
+    Kuichi predicted in June a benefit of $16 billion, not a great loss but compared to previous
+    number it is far below the target.
+</p>
+
+<div class="chart1" id="firstChart">
+    <script>
+      var myChart1 = "project_chart1_japanInbound.json";
+      vegaEmbed('#firstChart', myChart1);
+    </script>
+  </div>
    
 </body>
 </html>
