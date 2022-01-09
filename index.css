@@ -5,11 +5,6 @@
 /* This is my first proper css file */
 
 
-/*@font-face {
-    font-family: "Roboto";
-    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap") format("truetype");
- }*/
-
 body{
     background: linear-gradient(160deg, #F9EEFA,#D0BEC7);
     max-width: 450px;
