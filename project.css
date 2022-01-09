@@ -7,7 +7,7 @@ body{
     
 }
 
-h1, h3, p{
+h1, h2, p{
     color: #29274C;
     font-family: 'Nunito Sans', sans-serif;
     font-family: 'PT Serif', serif;
@@ -31,5 +31,37 @@ p.sub{
 
 }
  p.body1{
-     font-size:17px
+     font-size:17px;
  }
+p.sources{
+    font-size:15px;
+
+}
+
+li.sources{
+    list-style: none
+}
+
+a:link {
+    color: #630353;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:visited {
+    color: #d03970;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:hover {
+    color: #F2A6BD;
+    background-color: transparent;
+    text-decoration: underline;
+}
+li.resources{
+    list-style: none;
+    font-size: 18px;
+
+}
+ul.resources{
+    padding-left:0;
+}
