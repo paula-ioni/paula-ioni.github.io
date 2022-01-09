@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DS Portofolio</title>
 
     <link rel="stylesheet" href="index.css"> 
     <!--This is how we link the CSS into our HTML with the 'link' element-->
@@ -15,13 +16,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
         
+        
     </style>
 
-    <!--The next three lines allow the Vega embed-->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
-
+    <!--The next three UPDATED :) lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
 
 </head>
 
@@ -43,6 +44,7 @@
     <li></li>
     <li></li>
     <li></li>
+  
     
   </ul>
 
@@ -77,14 +79,12 @@
 
 <div class="chart2" id="secondChart">
   <script>
-    var myChart1 = "chart2_ukProductivity.json";
-    vegaEmbed('#secondChart', myChart1);
+    var myChart2 = "chart2_ukProductivity.json";
+    vegaEmbed('#secondChart', myChart2);
   </script>
 </div>
 
-<div class="wrap">
-  <p class="rubric-launch">To see my project click<a class="textLink" href="project"> here</a>.</p>
-  </div>
+
 
 <h3>DOGE Price</h3>
 <p>This chart shows the historical price of DOGE cryptocurrency</p>
@@ -92,8 +92,8 @@
 <!-- Vega chart-->
 <div class="chart3" id="thirdChart"> 
   <script> 
-  var myChart1 = "chart3_DOGEPrice.json";
-  vegaEmbed('#thirdChart', myChart1);
+  var myChart3 = "chart3_DOGEPrice.json";
+  vegaEmbed('#thirdChart', myChart3);
   </script>
 </div>
 <!------------->
@@ -105,8 +105,8 @@
 <!-- Vega chart-->
 <div class="chart4" id="fourChart">
   <script>
-    var myChart1 = "chart4_SHIBAINU.json";
-    vegaEmbed('#fourChart', myChart1);
+    var myChart4 = "chart4_SHIBAINU.json";
+    vegaEmbed('#fourChart', myChart4);
   </script>
 </div>
 
@@ -121,8 +121,8 @@
 <!-- Vega chart-->
 <div class="chart5" id="fifthChart">
   <script>
-    var myChart1 = "chart5_writtenJSON.json";
-    vegaEmbed('#fifthChart', myChart1);
+    var myChart5 = "chart5_writtenJSON.json";
+    vegaEmbed('#fifthChart', myChart5);
   </script>
 </div>
 
@@ -133,14 +133,13 @@
   <!-- Vega chart-->
 <div class="chart6" id="sixthChart">
   <script>
-    var myChart1 = "chart6_colors.json";
-    vegaEmbed('#sixthChart', myChart1);
+    var myChart6 = "chart6_colors.json";
+    vegaEmbed('#sixthChart', myChart6);
   </script>
 </div>
 
 <!--------------->
-    
-    
+
 <h3>Bristol Temperatures</h3>
 <p>Chart maps the maximum temperatures from Bristol recorded from 16th December until 31st December.
   I got the data from Weatherbit API via Rapid API. Then data generated was fetched with Python
@@ -149,12 +148,13 @@
  <!-- Vega chart-->
  <div class="chart7" id="seventhChart">
   <script>
-    var myChart1 = "chart7_weatherAPI.json";
-    vegaEmbed('#seventhChart', myChart1);
+    var myChart7 = "chart7_weatherAPI.json";
+    vegaEmbed('#seventhChart', myChart7);
   </script>
 </div>
 <!--------------->
- <h3>Eurovision 2021 Final Results </h3>
+
+<h3>Eurovision 2021 Final Results </h3>
 <p>Here is chart that shows the final ranking from the final of Eurovision 
   Song Contest 2021, based on the final number of points. I gathered the data by scraping the 
   Wikipedia page of the contest with Python and Pandas.
@@ -162,13 +162,65 @@
   <!-- Vega chart-->
 <div class="chart8" id="eighthChart">
   <script>
-    var myChart1 = "chart8_ESC2021.json";
-    vegaEmbed('#eighthChart', myChart1);
+    var myChart8 = "chart8_ESC2021.json";
+    vegaEmbed('#eighthChart', myChart8);
+  </script>
+</div>
+
+<!--------------->
+<h3>FRED Data using Loops in Python </h3>
+<p>The following 4 charts are data from FRED that were obtained by scraping FRED API and using
+  a loop to get simultaniously 4 data sets.
+  </p>
+  <!-- Vega charts-->
+<div class="chart9" id="nineChart">
+  <script>
+    var myChart9 = "chart9_FRED_unemp.json";
+    vegaEmbed('#nineChart', myChart9);
+  </script>
+</div>
+<div class="chart10" id="tenChart">
+  <script>
+    var myChart10 = "chart10_FRED_housing.json";
+    vegaEmbed('#tenChart', myChart10);
+  </script>
+</div>
+
+<div class="chart11" id="elevenChart">
+  <script>
+    var myChart11 = "chart11_FRED-ro.json";
+    vegaEmbed('#elevenChart', myChart11);
+  </script>
+</div>
+
+<div class="chart12" id="twelveChart">
+  <script>
+    var myChart12 = "chart12_FRED_jp.json";
+    vegaEmbed('#twelveChart', myChart12);
   </script>
 </div>
 
 <!--------------->
 
+<h3>Interactive charts </h3>
+<p>The following two charts thats I will use for my project as well 
+  have interactive functions. Data was scraped with Selenium for
+  the first graph and the second one uses a CSV from OECD
+  </p>
+  <!-- Vega chart-->
+<div class="chart13" id="thirteenChart">
+  <script>
+    var myChart13 = "project_chart1_japanInbound.json";
+    vegaEmbed('#thirteenChart', myChart13);
+  </script>
+</div>
+
+<div class="chart14" id="thirteenChart">
+  <script>
+    var myChart13 = "project_chart4_int_receipts.json";
+    vegaEmbed('#fourteenChart', myChart14);
+  </script>
+</div>
 
 </body>
 
