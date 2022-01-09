@@ -2,15 +2,13 @@
 
 
 
-
-
-
 /* This is my first proper css file */
-@font-face { font-family: 'PT Serif'; 
-    src: url('PressStart2P-Regular.ttf');
- } 
 
 
+/*@font-face {
+    font-family: "Roboto";
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap") format("truetype");
+ }*/
 
 body{
     background: linear-gradient(160deg, #F9EEFA,#D0BEC7);
@@ -25,16 +23,13 @@ body{
         margin: 0 8px;
     }
 }
-/*-------------LIGHT BULBS-----------*/
+
 #line{
     text-align: justify;
     white-space: nowrap;
     position: relative;
-    /*padding: 10px;*/
     width: 100%;
-    /*top: -100px;*/
     border-bottom: 2px solid rgb(185, 180, 180);
-    /*height: 100px;*/
     margin-bottom: 1px;
     
 }
@@ -52,6 +47,7 @@ li{
     height: 20px;
     border-radius: 50%;
     top: 5px;
+    
     /*animation*/
     animation-name: even-flash;
     animation-duration: 2s;
@@ -99,8 +95,6 @@ li{
     }
 }
 
-/*----END OF LIGHT BULBS------*/
-
 h1, h3, p{
     color: #3B193D;
     font-family: 'Roboto', sans-serif;
@@ -141,10 +135,42 @@ h1{
    
     
 }
-/*.chart4{
-    width: 340px;
-    border-style: solid;
-    border-radius: 6px;
-    border-color: black;
-    background-color: white;
+.chart9,.chart10, .chart11, .chart12
+{
+    margin: 10px;
+    border-style:solid;
+    border-radius:5px;
+    border-width: 4px;
+    border-color: #A7A1CE;
+    
+    
 }
+
+.chart13, .chart14{
+    margin: 10px;
+    border-style:solid;
+    border-radius:5px;
+    border-width: 4px;
+    border-color: #FA44A5;
+    width: 350px;
+    line-height: 13px;
+}
+
+.chart9{
+    width: 355px;
+    line-height: 13px;
+}
+    
+.chart10{
+    width: 380px;
+    line-height: 13px;
+}
+.chart11{
+    width: 339px;
+    line-height: 13px;
+}
+.chart12{
+    width: 359px;
+    line-height: 13px;
+}
+
