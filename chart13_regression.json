@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "",
+  "title": {
+    "text": "Japan Municipal Waste and Environmental Tax ",
+    "subtitle": "Yearly data 1994-2018, Source: OECD",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 12,
+    "fontSize": 14,
+    "anchor": "start",
+    "color": "#f8f7ff",
+    "subtitleColor": "#f8f7ff"
+  },
+  "config": {
+    "background": "rgba(184, 184, 255, 0.53)",
+    "view": {"stroke": "transparent"}
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/paula-ioni/paula-ioni.github.io/main/jpn_waste_tax.csv"
+  },
+  "width": 300,
+  "height": 300,
+  "layer": [
+    {
+      "mark": {"type": "point", "filled": true},
+      "encoding": {
+        "x": {
+          "field": "tax",
+          "type": "quantitative",
+          "scale": {"domain": [4, 7]},
+          "title": "% of taxation",
+          "axis": {
+            "grid": true,
+            "labelColor": "#f8f7ff",
+            "tickColor": "#f8f7ff",
+            "domainColor": "#f8f7ff",
+            "titleColor": "#f8f7ff",
+            "titleFontSize": 12
+          }
+        },
+        "y": {
+          "field": "waste",
+          "type": "quantitative",
+          "scale": {"domain": [330, 430]},
+          "title": "Kilograms per capita",
+          "axis": {
+            "grid": true,
+            "labelColor": "#f8f7ff",
+            "tickColor": "#f8f7ff",
+            "domainColor": "#f8f7ff",
+            "titleColor": "#f8f7ff",
+            "titleFontSize": 12
+          }
+        },
+        "color": {
+          "field": "time",
+          "type": "temporal",
+          "legend": null,
+          "scale": {"scheme": "plasma"}
+        }
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "#A458D7"},
+      "transform": [{"regression": "tax", "on": "waste"}],
+      "encoding": {
+        "x": {"field": "tax", "type": "quantitative"},
+        "y": {"field": "waste", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [
+        {"regression": "tax", "on": "waste", "params": true},
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "#f8f7ff",
+        "x": "width",
+        "align": "right",
+        "y": -10,
+        "fontSize": 14
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ]
+}
