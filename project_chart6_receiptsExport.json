@@ -7,7 +7,7 @@
   "mark": {"type": "line", "color": "#f2a6bd", "strokeWidth": 2, "opacity": 1},
   "title": {
     "text": "Japan International tourism, receipts (% of total exports)",
-    "subtitle": "Percentage of total exports, Source: FRED",
+    "subtitle": "Percentage of total exports, Source: World Bank",
     "subtitleColor": "#630353",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 11,
