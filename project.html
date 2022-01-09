@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DS project 2021-2022</title>
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="index.css">
 
     <!--SEARCH FOR FONT!!-->
     <style> 
@@ -17,35 +17,199 @@
         
     </style>
 
-    <!--The next three lines allow the Vega embed-->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <!--The next UPDATED three lines allow the Vega embed-->
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
 
 </head>
 
 <body>
  <h1>How the ban of international tourists affected the economy of Japan 
-     during COVID-19?  </h1>
+     during COVID-19?</h1>
 <p class="sub"> Project by Paula Ionita, BSc Economics & Econometrics </p>
-<p> One of the most famous tourist attractions of East Asia and 
-    the third most powerful economy in the globe, Japan still continues
-    to suffer like many other nations since the pandemic was officialy
-    declared by WHO.It was the country chosen to host Summer Olympics of 2020. 
-    The event was highly anticipated as it was expected to boost the economy greatly. 
-    For the first time in history, it was postponed for 2021 and no spectators were allowed. 
-    The short-term benefits before the pandemic were predicted at around $109 billion, with 
-    inbound tourists as the main drive force of this enormous number (Hornyak, 2021). Economist
-    Kuichi predicted in June a benefit of $16 billion, not a great loss but compared to previous
-    number it is far below the target.
+<p class="body1"> One of the most famous tourist attractions of East Asia and the third most powerful economy in the globe,
+  Japan continues to suffer like many other nations since the pandemic was officially declared by WHO. As host of
+  Summer Olympics 2020, it was expected to boost the economy greatly. For the first time in history, it was postponed
+  for 2021 and no spectators were allowed. The short-term benefits before the pandemic were predicted at around $109 billion,
+  with inbound tourists as the main drive force of this enormous number (Hornyak, 2021).
+  The aim of my project is to analyse how the ban of international tourists, that has been on going 
+  since March 2020, affected some of the key economics measurements.
+  
 </p>
 
-<div class="chart1" id="firstChart">
+
+
+  
+
+<p> First, let’s compare the number or international arrivals from 2019 – the last prosperous year in terms of tourism, 
+  with 2020 data. Finally, I plotted inbound arrivals during COVID, from 2020 and 2021
+
+  </p>
+ 
+  <div class="chart1" id="firstChart">
     <script>
       var myChart1 = "project_chart1_japanInbound.json";
       vegaEmbed('#firstChart', myChart1);
     </script>
   </div>
-   
+
+ <div class="listSource">
+<ul class="sources">
+  <li class="sources">Files used:</li>
+  <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/selenium_scraping_japanData.ipynb" target="_blank" rel="noopener noreferrer">selenium_scraping_japanData.ipynb</a></li>
+  <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/japan_inbound_2020.csv" target="_blank" rel="noopener noreferrer"> japan_inbound_2020.csv</a></li>
+  <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/project_chart1_japanInbound.json" target="_blank" rel="noopener noreferrer">project_chart1_japanInbound.json</a></li>
+  
+</ul>
+</div>
+  <div class="chart2" id="secondChart">
+    <script>
+      var myChart1 = "project_chart5_japan_covid_inbound.json";
+      vegaEmbed('#secondChart', myChart1);
+    </script>
+  </div>
+
+  <div class="listSource">
+    <ul class="sources">
+      <li class="sources">Files used:</li>
+      <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/table_extraction_pdf.ipynb" target="_blank" rel="noopener noreferrer">table_extraction_pdf.ipynb</a></li>
+      <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/japan_inbound_2021.csv" target="_blank" rel="noopener noreferrer">japan_inbound_2021.csv</a></li>
+      <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/project_chart5_japan_covid_inbound.json" target="_blank" rel="noopener noreferrer">project_chart5_japan_covid_inbound.json</a></li>
+      
+    </ul>
+    </div>
+<p>
+  An important economic factor related to tourism is the amount of money visitors spend while in the country.
+   These numbers count towards the exports of Japan, in our case. 
+  
+</p>
+<div class="chart3" id="thirdChart">
+  <script>
+    var myChart1 = "project_chart4_int_receipts.json";
+    vegaEmbed('#thirdChart', myChart1);
+  </script>
+</div>
+
+<div class="listSource">
+  <ul class="sources">
+    <li class="sources">Files used:</li>
+    <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/int_rec.csv" target="_blank" rel="noopener noreferrer">int_rec.csv</a></li>
+    <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/project_chart4_int_receipts.json" target="_blank" rel="noopener noreferrer">project_chart4_int_receipts.json</a></li>
+    
+  </ul>
+  </div>
+
+<div class="chart4" id="fourthChart">
+  <script>
+    var myChart1 = "project_chart6_receiptsExport.json";
+    vegaEmbed('#fourthChart', myChart1);
+  </script>
+</div>
+
+<div class="listSource">
+  <ul class="sources">
+    <li class="sources">Files used:</li>
+    <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/receipt_exports_japan.csv" target="_blank" rel="noopener noreferrer">receipt_exports_japan.csv</a></li>
+    <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/project_chart6_receiptsExport.json" target="_blank" rel="noopener noreferrer">project_chart6_receiptsExport.json</a></li>
+    
+  </ul>
+  </div>
+
+<div class="chart5" id="fifthChart">
+  <script>
+    var myChart1 = "project_chart2_japanExports.json";
+    vegaEmbed('#fifthChart', myChart1);
+  </script>
+</div>
+
+<div class="listSource">
+  <ul class="sources">
+    <li class="sources">Files used:</li>
+    <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/scraping_FRED_data_project.ipynb" target="_blank" rel="noopener noreferrer">scraping_FRED_data_project.ipynb</a></li>
+    <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/data_FRED-JPNEXPORTQDSNAQ.json" target="_blank" rel="noopener noreferrer">data_FRED-JPNEXPORTQDSNAQ.json</a></li>
+    <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/project_chart2_japanExports.json" target="_blank" rel="noopener noreferrer">project_chart2_japanExports.json</a></li>
+    
+  </ul>
+  </div>
+
+<p>
+  However, tourism contributes very less to the GDP, compared to other countries. Even before the pandemic,
+   tourism as a percentage of GDP has been maintained at just under 2%.
+
+</p>
+<div class="chart6" id="sixthChart">
+  <script>
+    var myChart1 = "project_chart3_tourism_gdp.json";
+    vegaEmbed('#sixthChart', myChart1);
+  </script>
+</div>
+
+<div class="listSource">
+  <ul class="sources">
+    <li class="sources">Files used:</li>
+    <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/tourism_GDP.csv" target="_blank" rel="noopener noreferrer">tourism_GDP.csv</a></li>
+    <li class="sources"><a class="sourceLink" href="https://github.com/paula-ioni/paula-ioni.github.io/blob/main/project_chart3_tourism_gdp.json" target="_blank" rel="noopener noreferrer">project_chart3_tourism_gdp.json</a></li> 
+  </ul>
+  </div>
+
+<h2>Conclusions</h2>
+<p>
+The drastic reduction of international visitors seems like a difficult situation of Japan. Over the years, 
+receipts from international tourists were gradually increasing and kept at high levels, compared to other 
+countries. As a percentage of exports, the number was rising every year, going from 1% up to 4% just before 
+COVID. However, the total number of exports did not seem to be affected by the 99% reduction of oversea tourists.
+Neither before the pandemic Japan was relying on tourism for their GDP, being kept at around 2% every year.
+Concluding, Japan was not hit too hard by closing the borders to foreigners, even if the flow of inbound 
+tourists was very profitable.
+
+</p>
+
+<h2>Data and challenges in obtaining it</h2>
+<p>
+Half of my data was obtained by scraping via Python and the other one by downloading
+CSV files and adapting them for Vega-Lite charting. My most advanced collecting data
+method was by scraping a dynamic website with Selenium and a PDF, then editing the 
+obtained data on Python as well. I got FRED data from their API by using Python, since 
+the direct link of the API would not work in Vega. The CSVs were downloaded from WorldBank 
+and OECD, then modified a little bit in Excel so Vega would comprehend the data properly for charting. 
+
+</p>
+
+<p>
+
+  My biggest challenge was definitely scraping the dynamic website with the use of the zombie browser 
+  Selenium. I had to get Python directly into my laptop and implicitly getting additional programmes. 
+  It was difficult to find each element by XPATH as it required to learn a new method of finding HTML objects. 
+  I also encountered two iFrames into the website, but luckily I managed to find the separate link for one of them 
+  and scraping that instead. 
+The PDF was scraped first with Tabula extension, and then I edited the table and merged it with the one I found
+ from scraping with Selenium, which was a bit tricky at the beginning but managed to compile them successfully.
+Another challenge was the date format for my scraped data. Since I got data by months, I could not include the year
+ in the format because Vega would format my graph wrong. After finding a good format, Vega would treat all of my dates 
+ as January 1st, January 2nd and not as January 1st and February 1st. I had to change it so the month would be shown first.
+
+</p>
+
+<h2>Resources</h2>
+<div class=RList>
+<ul class="resources">
+  <li class="resources"><a class="sourceLink" href="https://coolors.co/f2a6bd-d03970-630353-ffeedd-ffd8be-29274c" target="_blank" rel="noopener noreferrer">Colour Scheme for this project</a></li>
+  <li class="resources"><a class="sourceLink" href="https://www.unwto.org/international-tourism-and-covid-19" target="_blank" rel="noopener noreferrer">UNWTO</a></li>
+  <li class="resources"><a class="sourceLink" href="https://time.com/6089274/tokyo-olympics-economic-benefits/" target="_blank" rel="noopener noreferrer">TIME article</a></li>
+  <li class="resources"><a class="sourceLink" href="https://data.worldbank.org/indicator/ST.INT.RCPT.XP.ZS?locations=JP" target="_blank" rel="noopener noreferrer">World Bank</a></li>
+  <li class="resources"><a class="sourceLink" href="https://data.oecd.org/industry/tourism-receipts-and-spending.htm#indicator-chart" target="_blank" rel="noopener noreferrer">OECD</a></li>
+  <li class="resources"><a class="sourceLink" href="https://fred.stlouisfed.org/series/JPNEXPORTQDSNAQ" target="_blank" rel="noopener noreferrer">FRED</a></li>
+  <li class="resources"><a class="sourceLink" href="https://tabula.technology/" target="_blank" rel="noopener noreferrer">Tabula</a></li>
+  <li class="resources"><a class="sourceLink" href="https://statistics.jnto.go.jp/en/graph/" target="_blank" rel="noopener noreferrer">Japan Tourism Statistics</a></li>
+  <li class="resources"><a class="sourceLink" href="https://www.youtube.com/watch?v=Xjv1sY630Uc" target="_blank" rel="noopener noreferrer">Selenium Introduction</a></li>
+  <li class="resources"><a class="sourceLink" href="https://youtu.be/iJGvYBH9mcY" target="_blank" rel="noopener noreferrer">Selenium Scraping</a></li>
+  <li class="resources"><a class="sourceLink" href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">Stack Overflow - for most of my Python coding</a></li>
+  <li class="resources"><a class="sourceLink" href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">W3Schools for HTML and CSS</a></li>
+  
+</ul>
+</div>
+
 </body>
 </html>
